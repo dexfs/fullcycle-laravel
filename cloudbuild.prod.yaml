@@ -31,7 +31,7 @@ steps:
 - id: "Building image from Dockerfile.prod"
   name: 'docker'
   args: ['build', '-t', 'grc.io/$PROJECT_ID/app-laravel', '-f', 'Dockerfile.prod', '.']
-images: ['grc.io/$PROJECT_ID/app-laravel']
+images: ['grc.io/$PROJECT_ID/app-laravel:latest']
 
 # - id: "Pushing image"
 #   name: 'gcr.io/cloud-builders/docker'
