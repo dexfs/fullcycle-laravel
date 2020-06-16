@@ -31,11 +31,11 @@ steps:
 - id: "Building image from Dockerfile.prod"
   name: 'docker'
   args: ['build', '-t', 'grc.io/$PROJECT_ID/app-laravel:$SHORT_SHA', '-f', 'Dockerfile.prod', '.']
-images: ['grc.io/$PROJECT_ID/app-laravel:$SHORT_SHA']
+# images: ['grc.io/$PROJECT_ID/app-laravel:$SHORT_SHA']
 
-# - id: "Pushing image"
-#   name: 'docker'
-#   args: ['push', 'grc.io/$PROJECT_ID/app-laravel:$SHORT_SHA']
+- id: "Pushing image"
+  name: 'docker'
+  args: ['push', "grc.io/$PROJECT_ID/app-laravel:$SHORT_SHA"]
 
 # - id: "Adjusting deployment file - k8s"
 #   name: 'gcr.io/cloud-builders/gcloud'
