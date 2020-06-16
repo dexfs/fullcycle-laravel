@@ -46,7 +46,8 @@ steps:
       cat k8s/app/deployment-new.yaml;
 
 - id: "Deploying k8s"
-  name: 'gcr.io/cloud-builders/kubectl'
+  name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: 'kubectl'
   args:
     - 'apply'
     - '-f'
