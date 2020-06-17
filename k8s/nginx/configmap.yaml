@@ -4,7 +4,6 @@ metadata:
   name: nginx-conf
 data:
   nginx.conf: |
-
     server {
         listen 80;
         index index.php index.html;
