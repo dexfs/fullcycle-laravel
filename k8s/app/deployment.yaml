@@ -6,8 +6,6 @@ spec:
   selector:
     matchLabels:
       app: app
-
-
   template:
     metadata:
       labels:
@@ -15,6 +13,7 @@ spec:
     spec:
       containers:
       - name: app
+        # image: 'gcr.io/codeeducation-test-278602/app-laravel:415189b'
         image: img-app-deployment
         ports:
         - containerPort: 80

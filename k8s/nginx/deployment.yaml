@@ -4,9 +4,8 @@ metadata:
   name: nginx
 spec:
   selector:
-      matchLabels:
-          app: nginx
-
+    matchLabels:
+      app: nginx
   template:
     metadata:
       labels:
@@ -23,11 +22,10 @@ spec:
         - mountPath: /etc/nginx/conf.d
           name: nginx-conf
           readOnly: true
-
       volumes:
       - name: nginx-conf
         configMap:
           name: nginx-conf
           items:
             - key: nginx.conf
-              path: nginx.conf
+              path: default.conf
