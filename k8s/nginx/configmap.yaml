@@ -8,7 +8,7 @@ data:
     server {
         listen 80;
         index index.php index.html;
-        root /user/share/nginx/html;
+        root /usr/share/nginx/html;
 
         location ~ \.php$ {
             try_files $uri =404;
