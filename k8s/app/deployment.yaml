@@ -13,9 +13,8 @@ spec:
     spec:
       containers:
       - name: app
-        # image: 'gcr.io/codeeducation-test-278602/app-laravel:415189b'
         image: img-app-deployment
-        command: ["/bin/sh", "-c","ln -s /var/www /usr/share/nginx; php-fpm;"]
+        command: ["/bin/sh", "-c","ln -s /var/www /usr/share/nginx; /var/www/k8s/entrypoint.sh; ;php-fpm;"]
         ports:
         - containerPort: 80
 
